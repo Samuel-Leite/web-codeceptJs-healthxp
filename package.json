@@ -4,6 +4,9 @@
   "description": "Automacao Web \b\b\b\bd\bde teste Web com Codeceptj\bJS",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
+    "precommit": "git add . ",
+    "commit": "git cz && node .husky/push.js",
     "test": "npx codeceptjs run ./tests/steps/students_test.js"
   },
   "author": "Samuel Leite",
@@ -11,5 +14,9 @@
   "dependencies": {
     "codeceptjs": "^3.5.6",
     "playwright": "^1.39.0"
+  },
+  "devDependencies": {
+    "git-cz": "^4.9.0",
+    "husky": "^8.0.3"
   }
 }
