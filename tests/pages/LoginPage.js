@@ -1,6 +1,11 @@
 const { I } = inject();
 
+const popup = require("./components/Popup");
+
 module.exports = {
+
+  popup, // versão alternativa do constructor em Java referenciando os componentes
+
   go() {
     I.amOnPage("/");
   },
@@ -23,13 +28,5 @@ module.exports = {
     this.go();
     this.fill(user);
     this.submit();
-  },
-
-  popUpHave(text) {
-    I.see(text, "#swal2-content");
-  },
-
-  popUpBack() {
-    I.click(".swal2-cancel");
   },
 };

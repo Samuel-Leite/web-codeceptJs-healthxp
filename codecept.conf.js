@@ -29,7 +29,7 @@ exports.config = {
   include: {
     I: './steps_file.js',
     loginPage: "./tests/pages/LoginPage.js",
-    dashPage: "./tests/pages/DashPage.js"
+    studentPage: "./tests/pages/StudentPage.js"
   },
   name: 'web-codeceptJs-healthxp'
 }
