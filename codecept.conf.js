@@ -18,7 +18,13 @@ exports.config = {
       browser: 'chromium',
       url: 'http://localhost:3000',
       show: true
-    }
+    },
+    REST: {
+      endpoint: 'http://localhost:5000'
+    },
+    JSONResponse: {
+      requestHelper: "REST",
+    },
   },
   include: {
     I: './steps_file.js',

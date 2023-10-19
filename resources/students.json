@@ -5,5 +5,12 @@
         "age": "57",
         "weight": "71",
         "feet_tall": "1.70"
+    },
+    "duplicate": {
+        "name": "Deodoro da Fonseca",
+        "email": "deodoro@army.com",
+        "age": "57",
+        "weight": "71",
+        "feet_tall": "1.70"
     }
 }

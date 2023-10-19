@@ -9,6 +9,8 @@ Scenario("Cadastrar aluno com sucesso", ({ I }) => {
   const user = users.admin;
   const student = students.create;
 
+  I.deleteStudent(student.email)
+
   loginPage.doLogin(user);
   dashPage.userLoggedIn(user.name);
 
