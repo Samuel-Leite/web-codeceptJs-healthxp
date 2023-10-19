@@ -50,3 +50,20 @@ OBS.: Copiar as pastas: .husky, changelog.config.js e adicionar comandos na past
 "precommit": "git add . ",
 "commit": "git cz && node .husky/push.js",
 },
+
+## Configuração Helpers API para gerenciar a massa de teste
+npm init
+npm i express
+npm install nodemon (reinicia automaticamente aplicação após alterar código)
+npx nodemon app.js (colocar a aplicação no ar)
+npm install pg (instalação do PostgreSQL para conexão ao banco de dados)
+
+Após configurar a API na pasta Helpers, é necessário configurar no projeto a execução de teste em API e adiciona na pasta codecept.conf.js
+  helpers: {
+    REST: {
+      endpoint: 'http://localhost:5000'
+    },
+    JSONResponse: {
+      requestHelper: "REST",
+    },
+  },
