@@ -1,32 +1,27 @@
-const { I } = inject();
+/* eslint-disable no-undef */
+const { I } = inject()
 
-const popup = require("./components/Popup");
+const popup = require('./components/Popup')
 
 module.exports = {
-
   popup, // versão alternativa do constructor em Java referenciando os componentes
 
   go() {
-    I.amOnPage("/");
+    I.amOnPage('/')
   },
 
   fill(user) {
-    if (user.email) {
-      I.fillField("#email", user.email);
-    }
-
-    if (user.password) {
-      I.fillField("#password", user.password);
-    }
+    user.email ? I.fillField('#email', user.email) : I.say('empty email');
+    user.password ? I.fillField('#password', user.password) : I.say('empty email');
   },
 
   submit() {
-    I.click('//button[text()="Entrar"]');
+    I.click('//button[text()="Entrar"]')
   },
 
   doLogin(user) {
-    this.go();
-    this.fill(user);
-    this.submit();
-  },
-};
+    this.go()
+    this.fill(user)
+    this.submit()
+  }
+}

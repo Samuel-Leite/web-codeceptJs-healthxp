@@ -1,13 +1,10 @@
-const {
-  setHeadlessWhen,
-  setCommonPlugins
-} = require('@codeceptjs/configure');
+const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure')
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
-setHeadlessWhen(process.env.HEADLESS);
+setHeadlessWhen(process.env.HEADLESS)
 
 // enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
-setCommonPlugins();
+setCommonPlugins()
 
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
@@ -23,13 +20,13 @@ exports.config = {
       endpoint: 'http://localhost:5000'
     },
     JSONResponse: {
-      requestHelper: "REST",
-    },
+      requestHelper: 'REST'
+    }
   },
   include: {
     I: './steps_file.js',
-    loginPage: "./tests/pages/LoginPage.js",
-    studentPage: "./tests/pages/StudentPage.js"
+    loginPage: './tests/pages/LoginPage.js',
+    studentPage: './tests/pages/StudentPage.js'
   },
   name: 'web-codeceptJs-healthxp'
 }

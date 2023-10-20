@@ -12,5 +12,19 @@
         "age": "41",
         "weight": "83",
         "feet_tall": "1.85"
+    },
+    "remove": {
+        "name": "Capitão Rogers",
+        "email": "rogers@avengers.com",
+        "age": "83",
+        "weight": "93",
+        "feet_tall": "1.85"
+    },
+    "required": {
+        "name": "",
+        "email": "",
+        "age": "",
+        "weight": "",
+        "feet_tall": ""
     }
 }
