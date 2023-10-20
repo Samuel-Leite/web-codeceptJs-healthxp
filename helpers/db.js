@@ -1,15 +1,13 @@
 /* eslint-disable no-unused-vars */
-require("dotenv").config();
-
-const { Pool } = require("pg");
+const { Pool } = require('pg')
 
 const pool = new Pool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_USER,
-  port: process.env.DB_PORT,
-});
+  host: 'babar.db.elephantsql.com',
+  user: 'wgmhlqma',
+  password: 'B3uEGfDerQgQmJlVb6z9ltynm2idGUGB',
+  database: 'wgmhlqma',
+  port: 5432
+})
 
 const deleteAndCreateStudent = (req, res) => {
   const student = req.body

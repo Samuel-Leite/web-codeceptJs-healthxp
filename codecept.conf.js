@@ -2,6 +2,7 @@ const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure')
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS)
+require('dotenv').config()
 
 // enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
 setCommonPlugins()
@@ -12,7 +13,7 @@ exports.config = {
   output: './output',
   helpers: {
     Playwright: {
-      browser: 'chromium',
+      browser: process.env.BROWSER,
       url: 'http://localhost:3000',
       show: true
     },
@@ -21,6 +22,9 @@ exports.config = {
     },
     JSONResponse: {
       requestHelper: 'REST'
+    },
+    Hooks: {
+      require: './helpers/hooks.js'
     }
   },
   include: {
@@ -28,5 +32,6 @@ exports.config = {
     loginPage: './tests/pages/LoginPage.js',
     studentPage: './tests/pages/StudentPage.js'
   },
+  hooks: [],
   name: 'web-codeceptJs-healthxp'
 }
