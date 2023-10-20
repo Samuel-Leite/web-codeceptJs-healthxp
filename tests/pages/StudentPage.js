@@ -14,11 +14,23 @@ module.exports = {
   },
 
   submitForm(student) {
-    I.fillField('#name', student.name)
-    I.fillField('#email', student.email)
-    I.fillField('#age', student.age)
-    I.fillField('#weight', student.weight)
-    I.fillField('#feet_tall', student.feet_tall)
+    if (student.name) I.fillField('#name', student.name)
+    if (student.email) I.fillField('#email', student.email)
+    if (student.age) I.fillField('#age', student.age)
+    if (student.weight) I.fillField('#weight', student.weight)
+    if (student.feet_tall) I.fillField('#feet_tall', student.feet_tall)
     I.click('Cadastrar')
+  },
+
+  requiredMessage(label, text) {
+    I.see(text, `//label[text()="${label}"]/..//span`)
+  },
+
+  search(name) {
+    I.fillField('input[placeholder="Buscar por nome"]', name)
+  },
+
+  remove(email) {
+    I.click(`//td[text()="${email}"]/..//button`)
   }
 }

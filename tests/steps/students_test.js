@@ -19,7 +19,7 @@ Scenario('Cadastrar aluno com sucesso', ({ I }) => {
   studentPage.popup.haveText('Dados cadastrados com sucesso.')
 })
 
-Scenario('Não deve cadastrar aluno duplicado', ({ I }) => {
+Scenario('Não deve cadastrar aluno com e-mail duplicado', ({ I }) => {
   const user = users.admin
   const student = students.duplicate
 
@@ -30,4 +30,34 @@ Scenario('Não deve cadastrar aluno duplicado', ({ I }) => {
   studentPage.goToRegister()
   studentPage.submitForm(student)
   studentPage.popup.haveText('O email informado já foi cadastrado!')
+})
+
+Scenario('Excluir aluno sem matrícula', ({ I }) => {
+  const user = users.admin
+  const student = students.remove
+
+  I.resetStudent(student)
+
+  loginPage.doLogin(user)
+  studentPage.navbar.userLoggedIn(user.name)
+  studentPage.search(student.name)
+  studentPage.remove(student.email)
+  studentPage.popup.confirm()
+  studentPage.popup.haveText('Exclusão realizada com sucesso.')
+})
+
+Scenario('Validar obrigatoriedade dos campos', () => {
+  const user = users.admin
+  const student = students.required
+
+  loginPage.doLogin(user)
+  studentPage.navbar.userLoggedIn(user.name)
+  studentPage.goToRegister()
+  studentPage.submitForm(student)
+
+  studentPage.requiredMessage('Nome completo', 'Nome é obrigatório')
+  studentPage.requiredMessage('E-mail', 'O email é obrigatório')
+  studentPage.requiredMessage('Idade', 'A idade é obrigatória')
+  studentPage.requiredMessage('Peso (em kg)', 'O peso é obrigatório')
+  studentPage.requiredMessage('Altura', 'A altura é obrigatória')
 })

@@ -7,7 +7,8 @@
     "prepare": "husky install",
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js",
-    "test": "npx codeceptjs run ./tests/steps/students_test.js"
+    "student": "npx codeceptjs run ./tests/steps/students_test.js",
+    "login": "npx codeceptjs run ./tests/steps/login_test.js"
   },
   "author": "Samuel Leite",
   "license": "ISC",

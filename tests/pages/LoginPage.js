@@ -11,13 +11,8 @@ module.exports = {
   },
 
   fill(user) {
-    if (user.email) {
-      I.fillField('#email', user.email)
-    }
-
-    if (user.password) {
-      I.fillField('#password', user.password)
-    }
+    user.email ? I.fillField('#email', user.email) : I.say('empty email');
+    user.password ? I.fillField('#password', user.password) : I.say('empty email');
   },
 
   submit() {
