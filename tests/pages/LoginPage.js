@@ -11,8 +11,8 @@ module.exports = {
   },
 
   fill(user) {
-    user.email ? I.fillField('#email', user.email) : I.say('empty email');
-    user.password ? I.fillField('#password', user.password) : I.say('empty email');
+    user.email ? I.fillField('#email', user.email) : I.say('empty email')
+    user.password ? I.fillField('#password', user.password) : I.say('empty email')
   },
 
   submit() {

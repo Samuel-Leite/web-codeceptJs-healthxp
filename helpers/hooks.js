@@ -23,15 +23,15 @@ class hooks extends Helper {
   }
 
   // _before(test) {
-    // before a test
-    // codeceptjs.container
-    //   .helpers()
-    //   .Playwright.browserContext.setGeolocation({ latitude: -23.558, longitude: -46.6597 })
-    // codeceptjs.container.helpers().Playwright.browserContext.grantPermissions(['geolocation'])
-    // test.retries(process.env.RETRY)
-    // console.log('--------------------------------Start----------------------------------')
-    // const allure = codeceptjs.container.plugins('allure')
-    // allure.addParameter('0', 'ENV', process.env.BROWSER)
+  // before a test
+  // codeceptjs.container
+  //   .helpers()
+  //   .Playwright.browserContext.setGeolocation({ latitude: -23.558, longitude: -46.6597 })
+  // codeceptjs.container.helpers().Playwright.browserContext.grantPermissions(['geolocation'])
+  // test.retries(process.env.RETRY)
+  // console.log('--------------------------------Start----------------------------------')
+  // const allure = codeceptjs.container.plugins('allure')
+  // allure.addParameter('0', 'ENV', process.env.BROWSER)
   // }
 
   // _after() {

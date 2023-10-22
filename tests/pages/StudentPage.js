@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const { I } = inject()
 
-  // versão alternativa do constructor em Java referenciando os componentes
+// versão alternativa do constructor em Java referenciando os componentes
 const navbar = require('./components/Navbar')
 const popup = require('./components/Popup')
 

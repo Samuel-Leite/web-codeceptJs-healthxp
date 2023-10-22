@@ -31,7 +31,7 @@ exports.config = {
     I: './helpers/commands.js',
     loginPage: './tests/pages/LoginPage.js',
     studentPage: './tests/pages/StudentPage.js',
-    enrollsPage: './tests/pages/EnrollsPage.js' 
+    enrollsPage: './tests/pages/EnrollsPage.js'
   },
   hooks: [],
   name: 'web-codeceptJs-healthxp'
