@@ -28,7 +28,7 @@ exports.config = {
     }
   },
   include: {
-    I: './steps_file.js',
+    I: './helpers/commands.js',
     loginPage: './tests/pages/LoginPage.js',
     studentPage: './tests/pages/StudentPage.js',
     enrollsPage: './tests/pages/EnrollsPage.js' 
