@@ -32,6 +32,6 @@ Segue o projeto E2E da aplicação HealthXp através do framework CodeceptJS tes
 | Diretório            | Finalidade                                                                    |
 | ---------------------| ------------------------------------------------------------------------------|
 | ./husky              | Configuração da automação dos commits                                         |
-| ./helpers            | Configuração ao Banco de Dados através da API, Hooks e Custom Commandsste     |
+| ./helpers            | Configuração ao Banco de Dados através da API, Hooks e Custom Commands        |
 | ./resource           | Massa de testes                                                               |
 | ./tests              | Pages objects e steps de execução dos testes automatizados                    |

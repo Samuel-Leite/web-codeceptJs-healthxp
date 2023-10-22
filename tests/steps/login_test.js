@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-Feature('Plataforma Health Experience')
+Feature('Login na plataforma Health Experience')
 
 const { loginPage, studentPage } = inject()
 

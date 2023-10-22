@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-Feature('Plataforma Health Experience')
+Feature('Cadastro matrículas na plataforma Health Experience')
 
 const { loginPage, enrollsPage } = inject()
 
