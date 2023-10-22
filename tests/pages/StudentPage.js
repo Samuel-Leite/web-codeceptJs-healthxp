@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 const { I } = inject()
 
+  // versão alternativa do constructor em Java referenciando os componentes
 const navbar = require('./components/Navbar')
 const popup = require('./components/Popup')
 
@@ -22,7 +23,7 @@ module.exports = {
     I.click('Cadastrar')
   },
 
-  requiredMessage(label, text) {
+  alertMessage(label, text) {
     I.see(text, `//label[text()="${label}"]/..//span`)
   },
 
