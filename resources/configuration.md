@@ -69,3 +69,7 @@ Após configurar a API na pasta Helpers, é necessário configurar no projeto a 
   },
 
   As configurações do banco de dados estão na pasta Helpers (construção da API nas pastas app.js e db.js), porém para personalizar as massas de dados, foi criado uma função na pasta 'steps_file.js' que se assemelha ao custom commands do Cypress que referencia a API que se conecta ao banco de dados.
+
+  Para validação do payload da API que foi construída, foi utilizado o 'express-joi-validation' visando validar campos vazios etc através do schema
+  npm i express-joi-validation joi --save
+  npm install joi

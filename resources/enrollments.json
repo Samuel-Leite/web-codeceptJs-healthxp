@@ -7,6 +7,24 @@
             "weight": "71",
             "feet_tall": "1.70"
         },
-        "plan": "Health"
+        "plan": {
+            "id": 1,
+            "name": "Health",
+            "price": 99.99
+        }
+    },
+    "duplicate": {
+        "student": {
+            "name": "John Doe",
+            "email": "johndoe@gmail.com",
+            "age": "30",
+            "weight": "81",
+            "feet_tall": "1.74"
+        },
+        "plan": {
+            "id": 1,
+            "name": "Health",
+            "price": 99.99
+        }
     }
 }

@@ -16,5 +16,16 @@ module.exports = function() {
       this.sendDeleteRequest('/students/' + student);
       this.seeResponseCodeIsSuccessful();
     },
+
+    async createEnroll(dataEnrolls) {
+      const response = await this.sendPostRequest("/enrolls", {
+        email: dataEnrolls.student.email,
+        plan_id: dataEnrolls.plan.id,
+        price: dataEnrolls.plan.price,
+      });
+      this.seeResponseCodeIsSuccessful();
+
+      return response.data.enrollment_code;
+    },
   });
 }

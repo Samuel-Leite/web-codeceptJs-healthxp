@@ -12,12 +12,14 @@ class hooks extends Helper {
     console.log('******* Variáveis de Ambiente *******')
     console.log(`BROWSER: ${process.env.BROWSER}`)
     console.log('*************************************')
+    console.log('** Limpeza do output de evidências **')
     try {
       rimraf.sync('output/')
       console.log('Diretório "output" excluído com sucesso!')
     } catch (error) {
       console.error(`Ocorreu um erro ao excluir o diretório: ${error}`)
     }
+    console.log('*************************************')
   }
 
   // _before(test) {

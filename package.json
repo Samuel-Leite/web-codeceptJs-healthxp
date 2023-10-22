@@ -1,12 +1,13 @@
 {
   "name": "web-codeceptjs-healthxp",
   "version": "1.0.0",
-  "description": "Automacao Web \b\b\b\bd\bde teste Web com Codeceptj\bJS",
+  "description": "Automacao Web e API atravpes do CodeceptJS",
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js",
+    "dev": "npx nodemon ./helpers/app.js",
     "student": "npx codeceptjs run ./tests/steps/students_test.js",
     "login": "npx codeceptjs run ./tests/steps/login_test.js",
     "enrolls": "npx codeceptjs run ./tests/steps/enrollments.js"
@@ -18,6 +19,8 @@
     "dotenv": "^16.3.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "express": "^4.18.2",
+    "express-joi-validation": "^5.0.1",
+    "joi": "^17.11.0",
     "nodemon": "^3.0.1",
     "pg": "^8.11.3",
     "playwright": "^1.39.0",
