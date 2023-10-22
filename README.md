@@ -14,6 +14,7 @@ Segue o projeto E2E da aplicação HealthXp através do framework CodeceptJS tes
 * Clonar o projeto na máquina local
 * Executar no terminal a linha de comando "npm install"
 * Configurar o arquivo dotEnv com as variáveis do banco de dados ElephantSQL e o navegador, segue o modelo de configuração:
+
 | Dados para conexão com o banco de dados PostgreSQL     |
 | -------------------------------------------------------|
 | DB_HOST = '???'                                        |
@@ -23,6 +24,7 @@ Segue o projeto E2E da aplicação HealthXp através do framework CodeceptJS tes
 | -------------------------------------------------------|
 | Dados em gerais                                        |
 | BROWSER = 'chromium'                                   |
+
 * No terminal concernente ao Helper, executar o comando 'npm run dev' para inicializar a API integrada ao Banco de Dados
 * No terminal concernente a execução dos testes, executar o comando 'npm run enrolls'
 
