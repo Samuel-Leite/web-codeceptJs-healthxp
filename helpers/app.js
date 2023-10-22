@@ -5,12 +5,8 @@ app.use(express.json());
 
 const db = require("./db");
 
-app.get("/", function (req, res) {
-  res.json({ message: "Hello World" });
-});
-
 app.post("/students", db.deleteAndCreateStudent);
 app.delete("/students/:email", db.deleteStudentByEmail);
-app.get("/students/:email", db.selectStudent);
+app.post("/enrolls", db.insertEnrollByEmail);
 
 app.listen(5000);
