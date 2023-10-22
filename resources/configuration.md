@@ -58,7 +58,13 @@ npm install nodemon (reinicia automaticamente aplicação após alterar código)
 npx nodemon app.js (colocar a aplicação no ar)
 npm install pg (instalação do PostgreSQL para conexão ao banco de dados)
 
-Após configurar a API na pasta Helpers, é necessário configurar no projeto a execução de teste em API e adiciona na pasta codecept.conf.js
+Na pasta './helpers/db.js' está referenciando ao acesso do Banco de Dados assim como os comandos para inclusão e exclusão de massa de dados com os respectivos status de retorno de acordo com a situação. E na pasta './helpers/app.js' está de fato a construção da API contemplando os métodos POST e DELETE e a validação do payload, Schema, e o app.use é o último step visando que se obtiver erro ou sucesso irá retornar o respectivo status correspondente em formato JSON - vale ressaltar que as APIs construídas estão integradas ao Banco de Dados, ao invés de inserir os comandos no banco de dados, a própria API com os respectivos parâmetros realiza o gerenciamento da massa de dados. 
+
+Para validação do payload da API que foi construída, foi utilizado o 'express-joi-validation' visando validar campos vazios etc através do schema que é referenciado na pasta './helpers/app.js':
+npm i express-joi-validation joi --save
+npm install joi
+
+Após configurar a API na pasta Helpers, é necessário configurar no projeto a execução de teste em API adicionando na pasta codecept.conf.js:
   helpers: {
     REST: {
       endpoint: 'http://localhost:5000'
@@ -68,8 +74,4 @@ Após configurar a API na pasta Helpers, é necessário configurar no projeto a 
     },
   },
 
-  As configurações do banco de dados estão na pasta Helpers (construção da API nas pastas app.js e db.js), porém para personalizar as massas de dados, foi criado uma função na pasta 'steps_file.js' que se assemelha ao custom commands do Cypress que referencia a API que se conecta ao banco de dados.
-
-  Para validação do payload da API que foi construída, foi utilizado o 'express-joi-validation' visando validar campos vazios etc através do schema
-  npm i express-joi-validation joi --save
-  npm install joi
+As configurações do banco de dados estão na pasta Helpers (construção da API nas pastas app.js e db.js) - para referenciar a API integrada ao Banco de Dados, na pasta './helpers/commands.js' foi criado funções nativas do CodeceptJS (semelhante ao custom commands do Cypress) para simplificar a utilização na execução dos testes.
