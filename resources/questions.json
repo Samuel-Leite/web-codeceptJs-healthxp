@@ -1,0 +1,17 @@
+{
+    "create": {
+        "student": {
+            "name": "Horatio Nelson",
+            "email": "horatio@navy.com",
+            "age": "62",
+            "weight": "71",
+            "feet_tall": "1.70"
+        },
+        "plan": {
+            "id": 2,
+            "name": "Premium",
+            "price": 99.99
+        },
+        "question": "Como obter massa muscular para realizar teste físico da Marinha Britânica?"
+    }
+}
