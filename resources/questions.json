@@ -1,5 +1,5 @@
 {
-    "create": {
+    "notification": {
         "student": {
             "name": "Horatio Nelson",
             "email": "horatio@navy.com",
@@ -12,6 +12,7 @@
             "name": "Premium",
             "price": 99.99
         },
-        "question": "Como obter massa muscular para realizar teste físico da Marinha Britânica?"
+        "question": "Como obter massa muscular para realizar teste físico da Marinha Britânica?",
+        "answer": "Realizar exercícios e uma alimentação adequada"
     }
 }

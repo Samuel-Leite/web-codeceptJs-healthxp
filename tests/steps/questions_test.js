@@ -8,7 +8,7 @@ const data = require('../../resources/questions')
 
 Scenario('Recebimento de notificação com pergunta do aluno', ({ I }) => {
   const user = users.admin
-  const dataQuestions = data.create
+  const dataQuestions = data.notification
 
   I.resetStudent(dataQuestions.student)
   I.createEnroll(dataQuestions)
@@ -16,5 +16,10 @@ Scenario('Recebimento de notificação com pergunta do aluno', ({ I }) => {
 
   loginPage.doLogin(user)
   studentPage.navbar.userLoggedIn(user.name)
-  I.wait(10)
+
+  studentPage.navbar.openNotification()
+  studentPage.notification.haveQuestion(dataQuestions.question)
+  studentPage.notification.openQuestion(dataQuestions.question)
+  studentPage.notification.sendAnswer(dataQuestions.answer)
+  studentPage.popup.haveText('Resposta enviada com sucesso')
 })
