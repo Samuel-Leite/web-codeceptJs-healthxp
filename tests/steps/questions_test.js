@@ -12,7 +12,7 @@ Scenario('Recebimento de notificação com pergunta do aluno', ({ I }) => {
 
   I.resetStudent(dataQuestions.student)
   I.createEnroll(dataQuestions)
-  I.createQuestion(dataQuestions.question);
+  I.createQuestion(dataQuestions.question)
 
   loginPage.doLogin(user)
   studentPage.navbar.userLoggedIn(user.name)
