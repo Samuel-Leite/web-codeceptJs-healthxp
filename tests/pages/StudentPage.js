@@ -4,11 +4,13 @@ const { I } = inject()
 // versão alternativa do constructor em Java referenciando os componentes
 const navbar = require('./components/Navbar')
 const popup = require('./components/Popup')
+const notification = require('./components/Notification')
 
 module.exports = {
   // versão alternativa do constructor em Java referenciando os componentes
   navbar,
   popup,
+  notification,
 
   goToRegister() {
     I.click('Cadastrar')

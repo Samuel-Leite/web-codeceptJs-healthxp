@@ -8,5 +8,9 @@ module.exports = {
 
   goToEnrolls() {
     I.click('a[href="/enrollments"]')
+  },
+
+  openNotification(){
+    I.click('.notifications button')
   }
 }

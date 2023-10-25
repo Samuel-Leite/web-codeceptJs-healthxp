@@ -33,7 +33,7 @@ module.exports = function () {
 
     async createQuestion(question) {
       const data = require('../resources/questions')
-      const dataQuestions = data.create
+      const dataQuestions = data.notification
 
       // Chama a função resetStudent e obtém o studentId
       const studentIdFromActor = await this.resetStudent(dataQuestions.student)
