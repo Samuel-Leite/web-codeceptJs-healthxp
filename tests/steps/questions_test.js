@@ -9,16 +9,10 @@ const data = require('../../resources/questions')
 Scenario('Recebimento de notificação com pergunta do aluno', ({ I }) => {
   const user = users.admin
   const dataQuestions = data.create
-  const payload = {
-    question: "Teste API Codeceptjs correção 6v"
-  };
-
-  const body = data.create.question
-  console.log(body)
 
   I.resetStudent(dataQuestions.student)
   I.createEnroll(dataQuestions)
-  I.createQuestion(payload);
+  I.createQuestion(dataQuestions.question);
 
   loginPage.doLogin(user)
   studentPage.navbar.userLoggedIn(user.name)

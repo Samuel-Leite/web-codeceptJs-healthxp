@@ -34,9 +34,9 @@ module.exports = function () {
       return response.data.enrollment_code
     },
 
-    async createQuestion(payload) {
+    async createQuestion(question) {
       console.log('Criando pergunta...');
-      console.log('questionPayload:', payload);
+      console.log('questionPayload:', question);
 
       const data = require('../resources/questions')
       const dataQuestions = data.create
@@ -51,7 +51,7 @@ module.exports = function () {
       }
 
       try {
-        const response = await axios.post(`http://localhost:3333/students/${studentIdFromActor}/help-orders`, payload);
+        const response = await axios.post(`http://localhost:3333/students/${studentIdFromActor}/help-orders`, {question});
         this.seeResponseCodeIsSuccessful();
         console.log('Pergunta criada com sucesso!');
         return response.data;
