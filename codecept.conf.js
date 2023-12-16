@@ -15,6 +15,8 @@ exports.config = {
     Playwright: {
       browser: process.env.BROWSER,
       url: 'http://localhost:3000',
+      waitForTimeout: 5000,
+      waitForNavigation: 'networkidle0',
       show: true
     },
     REST: {
@@ -32,6 +34,28 @@ exports.config = {
     loginPage: './tests/pages/LoginPage.js',
     studentPage: './tests/pages/StudentPage.js',
     enrollsPage: './tests/pages/EnrollsPage.js'
+  },
+  bootstrap: null,
+  mocha: {},
+  plugins: {
+    // Para uso do Allure report
+    allure: {
+      enabled: true,
+      require: '@codeceptjs/allure-legacy',
+      outputDir: './output'
+    },
+    stepByStepReport: {
+      enabled: true,
+      screenshotsForAllureReport: true,
+      ignoreSteps: ['grab*'],
+      output: './output',
+      deleteSuccessful: false,
+      disableScreenshotOnFail: false
+    },
+    // Habilitar o ultimo print em caso de falha
+    screenshotOnFail: {
+      enabled: true
+    }
   },
   hooks: [],
   name: 'web-codeceptJs-healthxp'

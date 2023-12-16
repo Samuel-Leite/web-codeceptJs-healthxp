@@ -22,4 +22,4 @@ Scenario('Recebimento de notificação com pergunta do aluno', ({ I }) => {
   studentPage.notification.openQuestion(dataQuestions.question)
   studentPage.notification.sendAnswer(dataQuestions.answer)
   studentPage.popup.haveText('Resposta enviada com sucesso')
-})
+}).tag('wip')

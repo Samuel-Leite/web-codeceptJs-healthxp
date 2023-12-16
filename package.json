@@ -8,12 +8,16 @@
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js",
     "dev": "npx nodemon ./helpers/app.js",
-    "regression": "npx codeceptjs run ./tests/e2e/*_test.js",
-    "wip": "npx codeceptjs run ./tests/e2e/questions_test.js"
+    "regression": "npx codeceptjs run ./tests/e2e/*_test.js --verbose",
+    "tag": "npx codeceptjs run ./tests/e2e/*_test.js --verbose --grep"
   },
   "author": "Samuel Leite",
   "license": "ISC",
   "dependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
+    "@codeceptjs/configure": "^0.10.0",
+    "@codeceptjs/ui": "^0.2.0",
+    "allure-commandline": "^2.25.0",
     "axios": "^1.5.1",
     "codeceptjs": "^3.5.6",
     "dotenv": "^16.3.1",
@@ -24,6 +28,7 @@
     "nodemon": "^3.0.1",
     "pg": "^8.11.3",
     "playwright": "^1.39.0",
+    "playwright-core": "^1.40.1",
     "prettier": "^3.0.3"
   },
   "devDependencies": {
