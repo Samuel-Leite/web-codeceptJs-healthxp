@@ -8,8 +8,8 @@
     "precommit": "git add . ",
     "commit": "git cz && node .husky/push.js",
     "dev": "npx nodemon ./helpers/app.js",
-    "regression": "npx codeceptjs run ./tests/steps/*_test.js",
-    "wip": "npx codeceptjs run ./tests/steps/questions_test.js"
+    "regression": "npx codeceptjs run ./tests/e2e/*_test.js",
+    "wip": "npx codeceptjs run ./tests/e2e/questions_test.js"
   },
   "author": "Samuel Leite",
   "license": "ISC",
