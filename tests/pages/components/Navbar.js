@@ -10,7 +10,7 @@ module.exports = {
     I.click('a[href="/enrollments"]')
   },
 
-  openNotification(){
+  openNotification() {
     I.click('.notifications button')
   }
 }
