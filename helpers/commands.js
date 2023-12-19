@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 // in this file you can append custom step methods to 'I' object
 const axios = require('axios')
+const urlBD = require('../resources/conf/api.json').urlBaseBancoDados
 
 module.exports = function () {
   return actor({
@@ -47,7 +48,7 @@ module.exports = function () {
 
       try {
         const response = await axios.post(
-          `http://localhost:3333/students/${studentIdFromActor}/help-orders`,
+          `${urlBD}/students/${studentIdFromActor}/help-orders`,
           { question }
         )
         this.seeResponseCodeIsSuccessful()

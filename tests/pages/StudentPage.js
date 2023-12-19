@@ -34,6 +34,7 @@ module.exports = {
   },
 
   remove(email) {
+    I.waitForElement(`//td[text()="${email}"]/..//button`);
     I.click(`//td[text()="${email}"]/..//button`)
   }
 }

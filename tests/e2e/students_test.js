@@ -3,8 +3,8 @@ Feature('Cadastro alunos na plataforma Health Experience')
 
 const { loginPage, studentPage } = inject()
 
-const users = require('../../resources/users')
-const students = require('../../resources/students')
+const users = require('../../resources/data/users')
+const students = require('../../resources/data/students')
 
 Scenario('Cadastrar aluno com sucesso', ({ I }) => {
   const user = users.admin

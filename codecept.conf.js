@@ -14,13 +14,13 @@ exports.config = {
   helpers: {
     Playwright: {
       browser: process.env.BROWSER,
-      url: 'http://localhost:3000',
+      url: require('./resources/conf/web.json').urlBase,
       waitForTimeout: 5000,
       waitForNavigation: 'networkidle0',
       show: true
     },
     REST: {
-      endpoint: 'http://localhost:5000'
+      endpoint: require('./resources/conf/api.json').urlBaseApi,
     },
     JSONResponse: {
       requestHelper: 'REST'
@@ -38,7 +38,6 @@ exports.config = {
   bootstrap: null,
   mocha: {},
   plugins: {
-    // Para uso do Allure report
     allure: {
       enabled: true,
       require: '@codeceptjs/allure-legacy',

@@ -3,8 +3,8 @@ Feature('Cadastro matrículas na plataforma Health Experience')
 
 const { loginPage, enrollsPage } = inject()
 
-const users = require('../../resources/users')
-const enrolls = require('../../resources/enrollments')
+const users = require('../../resources/data/users')
+const enrolls = require('../../resources/data/enrollments')
 
 Scenario('Matricular aluno com sucesso', ({ I }) => {
   const user = users.admin

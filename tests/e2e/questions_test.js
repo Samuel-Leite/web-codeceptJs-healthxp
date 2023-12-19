@@ -3,7 +3,7 @@ Feature('Cadastro alunos na plataforma Health Experience')
 
 const { loginPage, studentPage } = inject()
 
-const users = require('../../resources/users')
+const users = require('../../resources/data/users')
 const data = require('../../resources/questions')
 
 Scenario('Recebimento de notificação com pergunta do aluno', ({ I }) => {
@@ -22,4 +22,4 @@ Scenario('Recebimento de notificação com pergunta do aluno', ({ I }) => {
   studentPage.notification.openQuestion(dataQuestions.question)
   studentPage.notification.sendAnswer(dataQuestions.answer)
   studentPage.popup.haveText('Resposta enviada com sucesso')
-}).tag('wip')
+})
