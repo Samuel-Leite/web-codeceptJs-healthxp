@@ -1,16 +1,22 @@
 /* eslint-disable no-undef */
 const { I } = inject()
 
+const locs = {
+  lblMensagemPopup: '#swal2-content',
+  btnConfirm: 'Confirmar',
+  btnBack: '.swal2-cancel'
+}
+
 module.exports = {
   haveText(text) {
-    I.see(text, '#swal2-content')
+    I.see(text, locs.lblMensagemPopup)
   },
 
   confirm() {
-    I.click('Confirmar')
+    I.click(locs.btnConfirm)
   },
 
   back() {
-    I.click('.swal2-cancel')
+    I.click(locs.btnBack)
   }
 }
