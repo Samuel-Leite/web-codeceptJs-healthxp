@@ -59,10 +59,9 @@ npm run tag @nome_tag
 | ./husky              | Configuração da automação dos commits                                         |
 | ./app                | Arquivo da aplicação (Web e API) para download                                |
 | ./helpers            | Configuração ao Banco de Dados através da API, Hooks e Custom Commands        |
-| ./resource           | Massa de testes                                                               |
+| ./resource           | Massa de testes e as URLs utilizadas na automação                             |
 | ./tests              | Pages objects e execução do e2e dos testes automatizados                      |
 
 ## 🔗 Links para Apoio
 * [CodeceptJs Playwright](https://codecept.io/helpers/Playwright/)
-* [CodeceptJs BDD](https://codecept.io/bdd/#gherkin)
 * [Playwright API Documentation](https://playwright.dev/docs/intro)
