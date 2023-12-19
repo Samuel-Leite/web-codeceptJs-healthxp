@@ -9,13 +9,11 @@ class hooks extends Helper {
   _init() {
     // before all tests
     console.log('*************************************')
-    console.log('******* Variáveis de Ambiente *******')
+    console.log('***** Dados Gerais da Execução ******')
     console.log(`BROWSER: ${process.env.BROWSER}`)
-    console.log('*************************************')
-    console.log('** Limpeza do output de evidências **')
     try {
       execSync('rm -rfv output/', utf8)
-      console.log('Diretório "output" excluído com sucesso!')
+      console.log('DIRETORIO: "output" excluído com sucesso!')
     } catch (error) {
       console.error(`Ocorreu um erro ao excluir o diretório: ${error}`)
     }
@@ -26,12 +24,11 @@ class hooks extends Helper {
     // before a test
     codeceptjs.container
       .helpers()
-      .Playwright.browserContext.setGeolocation({ latitude: -23.558, longitude: -46.6597 })
+      .Playwright.browserContext.setGeolocation({ latitude: -23.5489, longitude: -46.6388 })
     codeceptjs.container.helpers().Playwright.browserContext.grantPermissions(['geolocation'])
-    test.retries(process.env.RETRY)
     console.log('--------------------------------Start----------------------------------')
-    // let allure = codeceptjs.container.plugins('allure')
-    // allure.addParameter('0', 'ENV', process.env.BROWSER)
+    let allure = codeceptjs.container.plugins('allure')
+    allure.addParameter('0', 'ENV', process.env.BROWSER)
   }
   _after() {
     // after a test

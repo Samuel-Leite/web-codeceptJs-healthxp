@@ -3,7 +3,7 @@ Feature('Login na plataforma Health Experience')
 
 const { loginPage, studentPage } = inject()
 
-const users = require('../../resources/users')
+const users = require('../../resources/data/users')
 
 Scenario('Login com sucesso', () => {
   const user = users.admin
